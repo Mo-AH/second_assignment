@@ -28,7 +28,7 @@ To do this assignment, we need to make nodes communicate with each other.
 ## Stageros
 
 `stageros` node is the one given by the professor, that simulates a world as defined in 
-`my_world.world` file in the folder world. This file tells us everything about the environment: the world is passed to through a `.png` image which represents the circuit (Monza F1), the robot (a simple cube) is defined here and elaborated by the stageros node, and an initial posiion is set.
+`my_world.world` file in the folder world. This file tells us everything about the environment: `.png` image which represents the circuit (Monza F1), the robot (a simple cube) is defined here and an initial posiion is set.
 
 Stageros is subscribed to the topic `cmd_vel` from `geometry_msgs` package which provides a `Twist` type message: we can control the movement of the robot by publishing in this topic new velocities, both angular and linear.
 
