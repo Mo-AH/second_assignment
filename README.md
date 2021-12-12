@@ -1,7 +1,7 @@
 # Second Assignment of Research Track 1 - Robotics Engineering - UniGE
 
 This project makes use of [ROS](http://wiki.ros.org) (Robot-Operating-System), a set of software libraries and tools that allows us to build robot applications.
-The goal of the project is to make a robot run autonomously in a circuit, that is a reproduction of the Monza F1 circuit, giving the user an interface to give commands to the robot, like increasing velocity or to reset to initial position.
+The goal of the project is to make a robot run autonomously in a circuit, that is a reproduction of the Monza F1 circuit, giving the user an interface to control the robot, like increasing velocity or to reset to initial position.
 
 To do this, two nodes are created:
 * `robot_node` = controls the movements of the robot, making him drive in counter-clockwise sense and avoiding to touch the walls of the circuit.
