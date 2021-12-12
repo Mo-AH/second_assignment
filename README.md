@@ -27,6 +27,7 @@ To do this assignment, we make nodes communicate with each other in the followin
 
 ![image](https://user-images.githubusercontent.com/91679281/145716354-a39b0624-65db-4774-a74d-2988b65434d1.png)
 
+
 ### Stageros
 
 `stageros` node is the one given by the professor, that simulates a world as defined in 
@@ -37,6 +38,8 @@ Stageros is subscribed to the topic `cmd_vel` from `geometry_msgs` package which
 Stageros publishes on the `base_scan` topic from `sensor_msgs` package which provides a `LaserScan` type message: we can get informations about walls's distances by subscribing to this topic. 
 
 Finally, we can use a service called `reset_position` from the `std_srvs` package, which uses a type of message called `Empty`: there is no actual data inside it, but we can use it as a request to the service to reset the robot to its initial position.
+
+-----------------------
 
 ### Robot_node
 
@@ -71,6 +74,7 @@ loop
 
 Callback [1] is in charge of control correctly the robot. It does it by scomposing the ranges vector sent by stageros in 5 sections, taking the 1st(right), the middle-one (front) and the last one (left). After that, it performs a double call `move(choose_direction())`, where `move()` sets new linear/angular speeds and publishes them, according to the direction decided by the function `choose_direction`, which uses the 3 sections got before. More details about the functions are commented in the code.
 
+-----------------------
 
 ### Input_node
 
