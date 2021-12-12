@@ -9,7 +9,7 @@ To do this, two nodes are created:
 
 -----------------------
 
-# Install and running
+## Install and running
 
 To run this simulator, [__ROS Noetic__](http://wiki.ros.org/noetic/Installation) is required and it should be installed in the machine, following the instructions of the linked page, and a ROS workspace should be created.
 
@@ -21,13 +21,13 @@ Done that, you can simply follow these steps:
 
 -----------------------
 
-# NODES
+## NODES
 
-To do this assignment, we need to make nodes communicate with each other in the following way:
+To do this assignment, we make nodes communicate with each other in the following way:
 
 ![image](https://user-images.githubusercontent.com/91679281/145716354-a39b0624-65db-4774-a74d-2988b65434d1.png)
 
-## Stageros
+### Stageros
 
 `stageros` node is the one given by the professor, that simulates a world as defined in 
 `my_world.world` file in the folder world. This file tells us everything about the environment: `.png` image which represents the circuit (Monza F1), the robot (a simple cube) is defined here and an initial posiion is set.
@@ -38,7 +38,7 @@ Stageros publishes on the `base_scan` topic from `sensor_msgs` package which pro
 
 Finally, we can use a service called `reset_position` from the `std_srvs` package, which uses a type of message called `Empty`: there is no actual data inside it, but we can use it as a request to the service to reset the robot to its initial position.
 
-## Robot_node
+### Robot_node
 
 This is the main node of the assignment. It has to control the robot movements by publishing angular/linear velocities on the topic `cmd_vel` and it provides a service called `Speed_service` that is called by `input_node` to control the two speeds of the robot and its structure is:
 
@@ -70,7 +70,7 @@ loop
 ```
 
 
-## Input_node
+### Input_node
 
 This is the node that allows the user to control the robot. It gives us information about the current speeds parameters and it provides a list of buttons that the user can input through the keyboard:
 
@@ -86,7 +86,7 @@ This is the node that allows the user to control the robot. It gives us informat
 
 When a valid button is pressed from the user, the robot trasmits it to the robot_node, which responds by sending back the current speeds of the robot, that are printed. This is done through the service `Speed_service` from the robot_node.
 
-### Pseudocode
+That's his pseudocode:
 
 ```
 
