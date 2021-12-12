@@ -5,11 +5,11 @@ The goal of the project is to make a robot run autonomously in a circuit, that i
 
 To do this, two nodes are created:
 * `robot_node` = controls the movements of the robot, making him drive in counter-clockwise sense and avoiding to touch the walls of the circuit.
-* `input_node` = takes specific buttons from user, sending them through a service to the robot_node
+* `input_node` = takes specific buttons from user, sending them through a service to the robot_node, and prints the current speeds of the robot
 
 -----------------------
 
-## Install and running
+# Install and running
 
 To run this simulator, [__ROS Noetic__](http://wiki.ros.org/noetic/Installation) is required and it should be installed in the machine, following the instructions of the linked page, and a ROS workspace should be created.
 
