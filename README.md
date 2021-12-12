@@ -60,13 +60,13 @@ Subscribe to `base_scan` topic from `stageros` node to get distances [1]
 Provide a service `Speed_service` to get requests from `input_node` [2]
 Create a publisher to `cmd_vel` topic to set velocities [3]
 
+loop 
+    [1] get distances from stageros node (control callback)
+        choose direction
+        [3] move in the direction found (publish velocity)
 
-[1] get distances from stageros node (control callback)
-    choose direction
-    [3] move in the direction found (publish velocity)
-
-[2] if received command (setSpeed callback)
-    change speeds/position 
+    [2] if received command (setSpeed callback)
+        change speeds/position 
 
 ```
 
