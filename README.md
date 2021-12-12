@@ -23,7 +23,10 @@ Done that, you can simply follow these steps:
 
 # NODES
 
-To do this assignment, we need to make nodes communicate with each other.
+To do this assignment, we need to make nodes communicate with each other in the following way:
+
+![image](https://user-images.githubusercontent.com/91679281/145716269-da555e81-0180-427a-a826-96e8b6ebd387.png)
+
 
 ## Stageros
 
@@ -49,7 +52,7 @@ float32 angular
 
 When it's called by `input_node`, with request being only a char, it performs some operation to change speeds or to reset position, and returns as a response the values of linear and angular speed.
 
-### Pseudocode
+That's his pseudocode:
 
 ```
 
@@ -70,7 +73,7 @@ Create a publisher to `cmd_vel` topic to set velocities [3]
 
 ## Input_node
 
-This is the node that allows the user to control the robot. It provides a list of buttons that the user can input through the keyboard:
+This is the node that allows the user to control the robot. It gives us information about the current speeds parameters and it provides a list of buttons that the user can input through the keyboard:
 
 | Commands | Description|
 |:--------:|:----------:|
