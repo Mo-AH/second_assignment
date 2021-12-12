@@ -25,8 +25,7 @@ Done that, you can simply follow these steps:
 
 To do this assignment, we need to make nodes communicate with each other in the following way:
 
-![image](https://user-images.githubusercontent.com/91679281/145716269-da555e81-0180-427a-a826-96e8b6ebd387.png)
-
+![image](https://user-images.githubusercontent.com/91679281/145716354-a39b0624-65db-4774-a74d-2988b65434d1.png)
 
 ## Stageros
 
