@@ -69,6 +69,8 @@ loop
 
 ```
 
+Callback [1] is in charge of control correctly the robot. It does it by scomposing the ranges vector sent by stageros in 5 sections, taking the 1st(right), the middle-one (front) and the last one (left). After that, it performs a double call `move(choose_direction())`, where `move()` sets new linear/angular speeds and publishes them, according to the direction decided by the function `choose_direction`, which uses the 3 sections got before. More details about the functions are commented in the code.
+
 
 ### Input_node
 
