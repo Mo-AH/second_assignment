@@ -105,3 +105,11 @@ loop
         print new speeds
 
 ```
+
+## Possible improvements
+
+The program could be improved in several ways:
+* Get more fluid movements of the robot, maybe simulating a real trajectory of a F1 Machine
+* Do more controls when changing speed, for example to never go under 0 for both linear and angular speed, to avoid unrealistic behaviour
+* Adding a button to change the sense of the lap from counter-clockwise to clockwise
+* Adding an int counting the number of laps and a time variable to get the time for every lap
