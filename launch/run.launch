@@ -1,0 +1,5 @@
+<launch>
+	<node name="stageros" pkg="stage_ros" type="stageros" required="true" args="$(find second_assignment)/world/my_world.world"/>
+	<node name="robot_node" pkg="second_assignment" type="robot_node" required="true" output="screen"/>
+	<node name="input_node" pkg="second_assignment" type="input_node" required="true" output="screen"/>
+</launch>
